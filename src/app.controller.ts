@@ -32,7 +32,7 @@ export class AppController {
     console.log('called controller');
     return calculateOfflineCartBill(cart, restFees, rest_round_off);
   }
-
+ 
   @Get('/calculate-order-bill')
   calculateOfflineOrderBill(
     @Body('order') order,
@@ -41,7 +41,6 @@ export class AppController {
     @Body('restFees') restFees,
     @Body('rest_round_off') rest_round_off,
   ) {
-    console.log('called controller');
     return calculateOfflineOrderBill(order, restFees, coupon, billing,rest_round_off);
   }
 }
